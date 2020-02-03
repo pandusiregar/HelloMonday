@@ -25,4 +25,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose --version
 
-docker and docker-compose already installed!!
+echo docker and docker-compose already installed!!
