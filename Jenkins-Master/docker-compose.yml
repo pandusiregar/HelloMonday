@@ -1,0 +1,14 @@
+jenkins-master:
+      build: .
+      ports:
+        - 8080:8080
+        - 50000:50000
+      restart: always
+      volumes:
+        - ./vol:/var/jenkins_home/
+      environment:
+        - JAVA_OPTS=-Dmail.smtp.starttls.enable=true
+        - VIRTUAL_HOST=jenkins.something.com
+        - LETSENCRYPT_HOST=jenkins.something.com
+        - LETSENCRYPT_EMAIL=@gmail.com
+        - VIRTUAL_PORT=8080
